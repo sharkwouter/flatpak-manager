@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Flatpak Manager SteamOS
+GenericName=Flatpak Manager
+Comment=Flatpak frontend for SteamOS
+Exec=flatpak-manager-steamos
+Icon=flatpak-manager
+Type=Application
+Categories=Utility;
