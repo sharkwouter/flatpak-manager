@@ -35,12 +35,12 @@ class manager():
                     description = ""
 
                 installed = (flatpak_id in self.applications_installed)
-                application = vfmflatpak.application(flatpak_id, remote_name, name, description, version=version)
+                application = pyflatpak.application(flatpak_id, remote_name, name, description, version=version)
             else:
                 flatpak_id = line.strip()
                 name = flatpak_id.split(".")[-1]
                 installed = (flatpak_id in self.applications_installed)
-                application = vfmflatpak.application(flatpak_id, remote_name, name)
+                application = pyflatpak.application(flatpak_id, remote_name, name)
 
             applications_available.append(application)
             line_number += 1

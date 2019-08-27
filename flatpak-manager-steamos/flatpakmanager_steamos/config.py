@@ -7,3 +7,4 @@ class config():
     grid_size = resolution[0]/32
     font = pygameMenu.font.FONT_OPEN_SANS
     logo = "data/flatpak-manager.png"
+    applications_per_page = 7

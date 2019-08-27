@@ -1,7 +1,8 @@
 class color():
   background = (19, 139, 67)
+  title = (108, 196, 154)
+  selected = (0, 0, 0)
   button = (20, 167, 92)
-  button_selected = (108, 196, 154)
   button_border = (0, 0, 0)
   button_border_selected = (185, 185 ,185)
   text = (0, 0, 0)
