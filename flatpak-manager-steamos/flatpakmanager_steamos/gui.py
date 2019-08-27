@@ -78,9 +78,6 @@ class gui():
 
         pygame.display.update()
 
-    def __do(self, label=None, page=None):
-        self.__generate_available_application_menu(label, page)
-
     def __generate_available_application_menu(self, label=None, page=None):
         application_list = self.__flatpak_manager.applications_available
 
@@ -97,7 +94,7 @@ class gui():
         last_page = len(application_list) / flatpakmanager_steamos.config.applications_per_page + 1
         for number in range(1, last_page + 1):
             page_list.append(("Page {}/{}".format(number, last_page), number))
-        menu.add_selector("", page_list, onchange=self.__do,
+        menu.add_selector("", page_list, onchange=self.__generate_available_application_menu,
                           selector_id='page_selector{}'.format(self.menu_available_page))
 
         # add application buttons to menu
